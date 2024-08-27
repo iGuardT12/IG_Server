@@ -2,6 +2,7 @@ package iGuard.Server.Controller;
 
 import iGuard.Server.Dto.UserRequest;
 import iGuard.Server.Dto.UserResponse;
+import iGuard.Server.Repository.UserRepository;
 import iGuard.Server.Service.auth.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,7 @@ import java.util.Optional;
 public class UserController {
 
     private final UserService userService;
+    private final UserRepository ur;
 
     // 회원가입 페이지
     @GetMapping("/join")

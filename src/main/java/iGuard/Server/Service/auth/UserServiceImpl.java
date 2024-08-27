@@ -2,6 +2,7 @@ package iGuard.Server.Service.auth;
 
 import iGuard.Server.Dto.UserRequest;
 //import iGuard.Server.Dto.UserResponse;
+import iGuard.Server.Dto.UserResponse;
 import iGuard.Server.Repository.UserRepository;
 import iGuard.Server.Util.SecurityUserContextProvider;
 import lombok.RequiredArgsConstructor;
@@ -34,7 +35,6 @@ public class UserServiceImpl implements UserService {
                 });
     }
 
-    /*
     @Override
     public UserResponse getUser() {
         String id = userContextProvider.getLoginUserId();
@@ -42,7 +42,6 @@ public class UserServiceImpl implements UserService {
                 .map(UserResponse::getFrom)
                 .orElseThrow(() -> new RuntimeException("사용자를 찾을 수 없습니다."));
     }
-     */
 
     @Override
     public void updateUser(UserRequest user) {
